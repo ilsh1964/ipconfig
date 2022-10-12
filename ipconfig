@@ -13,7 +13,7 @@ echo
 CARD=$(ip a | grep ": en\|: et"  |cut -d: -f2 |cut -d" " -f2)
 STATUS=$(ip a | grep ": en\|: et" | grep "state UP")
 if test $? = "0"; then
-    IP=$(hostname -I)
+    IP=$(hostname -I | cut -d' ' -f1)
     SUBNET=$(ip a | grep $IP | cut -d"/" -f2 | cut -d' ' -f1)
     echo "WIRED:"
     echo "    STATUS  : UP"
