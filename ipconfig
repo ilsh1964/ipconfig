@@ -6,7 +6,7 @@ echo
 echo "IP Config - Version 1.0"
 echo "======================="
 echo
-HOSTNAME=$(hostname -I)
+HOSTNAME=$(hostname)
 echo "HOSTNAME: $HOSTNAME"
 echo
 ### IP ADDRESS - WIRED ###
